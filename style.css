@@ -46,7 +46,7 @@ body {
   padding: 10px 10px;
 }
 .navbar__items--item a:hover {
-  color: #bfdbfe;
+  color: #f0f0f0;
   background-color: #6b7280;
 }
 .navbar__menu {
