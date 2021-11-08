@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  font-size: 62.5%;
+}
+.navbar,
+.navbar__items,
+.navbar__marketName,
+.navbar__hamburger-menu,
+.navbar__menu-tip,
+.navbar__menu-tip-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__marketName {
+  cursor: default;
+}
+.navbar {
+  width: 100%;
+  padding: 5px 20px;
+  background-color: #e5e7ebc7;
+  position: fixed;
+  top: 0;
+}
+.navbar__items {
+  justify-content: space-evenly;
+  width: 260px;
+  display: none;
+}
+.navbar__logo {
+  font-size: 1.3rem;
+  color: #374151;
+}
+.navbar__items--item a {
+  font-size: 1rem;
+  color: #374151;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+.navbar__items--item a:hover {
+  color: #bfdbfe;
+  background-color: #6b7280;
+}
+.navbar__menu {
+  display: flex;
+}
+.navbar__hamburger-menu {
+  width: 30px;
+  height: 30px;
+  flex-direction: column;
+  cursor: pointer;
+}
+.navbar__hamburger-menu span {
+  padding: 3px 15px;
+  background-color: #374151;
+  border-radius: 2px;
+}
+.navbar__menu-tip {
+  width: 150px;
+  height: 150px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 4px;
+  top: 50px;
+  right: 10px;
+  z-index: 10;
+}
+.navbar__menu-tip::before {
+  content: "";
+  border: 10px solid;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  margin-left: 65%;
+  top: -20px;
+}
+.navbar__menu-tip-text {
+  width: 150px;
+  height: 50px;
+  justify-content: center;
+  font-size: 1rem;
+}
+.navbar__menu-tip-text:hover {
+  background-color: #6b728078;
+}
+.header-image img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+}
+@media screen and (min-width: 800px) {
+  .navbar__items {
+    display: flex;
+  }
+  .navbar__menu {
+    display: none;
+  }
+  .navbar__logo {
+    font-size: 2rem;
+  }
+}
